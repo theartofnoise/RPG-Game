@@ -2,7 +2,22 @@
     border: solid 1px black;
     
 } */
-#fightButton {
+#attackButton {
     margin-top: 100%;
     
+}
+.pic {
+    position: relative;
+}
+.hp {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(205, 241, 255, 0.513);
+    left: 0; 
+  right: 0; 
+  bottom: 5px;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 150px;
+
 }

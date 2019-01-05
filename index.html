@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Toon Takedown</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
 
     <script src="assets/javascript/game.js"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-12">
-          <h1>Toon Takedown!</h1>
-          <button type="button" class="btn btn-danger" id="start">Start</button>
+        <div class="row text-center">
+            <div class="col-12">
+                <h1>Toon Takedown!</h1>
+                <button type="button" class="btn btn-danger" id="start">Start</button>
+            </div>
         </div>
-    </div>
-    <div class="row text-center">
-        <div class="col-sm-12"><h1 id="mainTitle"></h1></div>
-        <div class="col-sm fighter" id="choose0"><h3 id="pTitle0"></h3></div>
-        <div class="col-sm fighter" id="choose1"><h3 id="pTitle1"></h3></div>
-        <div class="col-sm fighter" id="choose2"><h3 id="pTitle2"></h3></div>
-        <div class="col-sm fighter" id="choose3"><h3 id="pTitle3"></h3></div>
-    </div>
-    <hr>
+        <div class="row text-center">
+            <div class="col-sm-12">
+                <h1 id="mainTitle"></h1>
+            </div>
+            <div class="col-sm fighter" id="choose0">
+                <h3 class="title" id="pTitle0"></h3>
+                <div class="pic" id="pic0"></div>
+                <h4 class="hp" id="hp0"></h4>
+            </div>
+            <div class="col-sm fighter" id="choose1">
+                <h3 class="title" id="pTitle1"></h3>
+                <div class="pic" id="pic1"></div>
+                <h4 class="hp" id="hp1"></h4>
+            </div>
+            <div class="col-sm fighter" id="choose2">
+                <h3 class="title" id="pTitle2"></h3>
+                <div class="pic" id="pic2"></div>
+                <h4 class="hp" id="hp2"></h4>
+            </div>
+            <div class="col-sm fighter" id="choose3">
+                <h3 class="title" id="pTitle3"></h3>
+                <div class="pic" id="pic3"></div>
+                <h4 class="hp" id="hp3"></h4>
+            </div>
+        </div>
+        <hr>
         <div class="col-12 text-center">
             <h2 id="fightTitle"></h2>
-      <div class="row text-center">
-        <div class="col-sm-5"><h2 id="p1Area"></h2></div>
-        <div class="col-sm-2">          <button type="button" class="btn btn-danger" id="fightButton"></button>
+            <div class="row text-center">
+                <div class="col-sm-5">
+                    <h2 id="p1Area"></h2>
+                </div>
+                <div class="col-sm-2"> <button type="button" class="btn btn-danger" id="attackButton"></button>
+                </div>
+                <div class="col-sm-5">
+                    <h2 id="defenderArea"></h2>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-5"><h2 id="defenderArea"></h2></div>
-      </div>
-    </div>
-  </body>
+</body>
+
 </html>
