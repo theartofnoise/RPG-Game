@@ -2,6 +2,9 @@
     border: solid 1px black;
     
 } */
+body {
+    background-color: #0072ff;
+}
 #attackButton {
     margin-top: 100%;
     
@@ -19,5 +22,12 @@
   margin-left: auto; 
   margin-right: auto; 
   width: 150px;
-
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    border-radius: 0rem;
+    color: rgb(230, 230, 230);
 }
