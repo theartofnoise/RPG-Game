@@ -2,8 +2,14 @@
     border: solid 1px black;
     
 } */
+html {
+    padding: 0px;
+    position: relative;
+    min-height: 100%;
+}
 body {
     background-color: #0072ff;
+    padding-bottom: 120px;
 }
 #attackButton {
     margin-top: 100%;
