@@ -141,12 +141,13 @@ $().ready(function() {
       wins++;
       $("#defenderArea").text("");
       $("#attackButton").hide();
-      if (wins < 4) {
+    }
+    if (wins < 2) {
       $("#fightTitle").text("Choose your next victim!!");
     } else {
       $("#fightTitle").text(currentPlayer.name+" is the king of the toons!!!");
 
-      }
+      
 
       
     }
