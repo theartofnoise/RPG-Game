@@ -142,7 +142,7 @@ $().ready(function() {
       $("#defenderArea").text("");
       $("#attackButton").hide();
     }
-    if (wins < 2) {
+    if (wins < 3) {
       $("#fightTitle").text("Choose your next victim!!");
     } else {
       $("#fightTitle").text(currentPlayer.name+" is the king of the toons!!!");
