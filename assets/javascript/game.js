@@ -43,7 +43,7 @@ var currentPlayer;
 var currentDefender;
 var damageGiven;
 var damageTaken;
-var wins;
+var wins = 0;
 var losses;
 
 //game object
