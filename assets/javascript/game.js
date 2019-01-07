@@ -64,14 +64,13 @@ var game = {
     }
     $("#mainTitle").text("Choose your fighter...");
   },
-  //choose fighters
+  //choose fighters and opponent
   chosenPlayer: function(x, pId) {
     if (p1 === false && p2 === false) {
       $("#p1Area").append("Player 1");
       $("#p1Area").append(x);
       p1 = true;
       $("#mainTitle").text("Choose your opponent...");
-      
       currentPlayer = toons[pId];
       console.log(currentPlayer);
     } else if (p1 === true && p2 === false) {
@@ -89,6 +88,7 @@ var game = {
       console.log("done");
     }
   },
+  //attack player
   attackPlayer: function() {
     damageTaken = currentDefender.atk-currentPlayer.def;
     currentPlayer.hp = currentPlayer.hp-damageTaken;
@@ -106,6 +106,7 @@ var game = {
     $("#p1Area").css("box-shadow", "0 0 0px #FF0000")
   },250);
   },
+  //attack opponent
   attackDefender: function() {
     damageGiven = currentPlayer.atk - currentDefender.def;
     currentDefender.hp = currentDefender.hp-damageGiven;
@@ -140,7 +141,7 @@ $().ready(function() {
     $(this).hide();
     $("footer").show(500);
 
-  })
+  });
   //choosing fighter and defender
   $('#choose0').on('click', function() {
     game.chosenPlayer(this, 0);

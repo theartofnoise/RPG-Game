@@ -10,7 +10,11 @@ html {
   min-height: 100%;
 }
 body {
-  background-color: #0072ff;
+    background: #d2dfed; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #d2dfed 0%, #c8d7eb 19%, #a6c0e3 35%, #a6c0e3 35%, #bed0ea 51%, #afc7e8 62%, #bad0ef 75%, #99b5db 88%, #799bc8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #d2dfed 0%,#c8d7eb 19%,#a6c0e3 35%,#a6c0e3 35%,#bed0ea 51%,#afc7e8 62%,#bad0ef 75%,#99b5db 88%,#799bc8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #d2dfed 0%,#c8d7eb 19%,#a6c0e3 35%,#a6c0e3 35%,#bed0ea 51%,#afc7e8 62%,#bad0ef 75%,#99b5db 88%,#799bc8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2dfed', endColorstr='#799bc8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   padding-bottom: 120px;
 }
 button {
