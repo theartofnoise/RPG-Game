@@ -46,8 +46,8 @@ var damageTaken;
 var wins = 0;
 var losses;
 var atkDelay = true;
-var leftHook = new Audio('assets/sounds/leftHook.wav');
-var rightCross = new Audio('assets/sounds/rightCross.wav');
+var leftHook = new Audio('assets/sounds/leftHook.mp3');
+var rightCross = new Audio('assets/sounds/rightCross.mp3');
 
 
 //game object
