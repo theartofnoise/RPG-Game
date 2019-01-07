@@ -48,6 +48,7 @@ footer {
     transform: translate(-50%, 0);
     z-index: 1;
     display: none;
+    width: 100%;
 }
 @media all and (orientation: portrait) {
   #rotate {
