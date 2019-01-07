@@ -46,8 +46,8 @@ var damageTaken;
 var wins = 0;
 var losses;
 var atkDelay = true;
-var leftHook = new Audio('assets/sounds/leftHook.mp3');
-var rightCross = new Audio('assets/sounds/rightCross.mp3');
+var leftHook = new Audio('assets/sounds/leftHook.wav');
+var rightCross = new Audio('assets/sounds/rightCross.wav');
 
 
 //game object
@@ -175,7 +175,7 @@ $().ready(function() {
       $(".topRow").show(1000);
     }
     if (wins === 3) {
-    
+      $(".tbe").css("display", "none");
       $("#fightTitle").text(currentPlayer.name+" is the king of the toons!!!");
 
     }
