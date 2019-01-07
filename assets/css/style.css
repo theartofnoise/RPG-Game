@@ -5,42 +5,52 @@
     
 } */
 html {
-    padding: 0px;
-    position: relative;
-    min-height: 100%;
+  padding: 0px;
+  position: relative;
+  min-height: 100%;
 }
 body {
-    background-color: #0072ff;
-    padding-bottom: 120px;
+  background-color: #0072ff;
+  padding-bottom: 120px;
 }
 #attackButton {
-    margin-top: 10%;
-    
+  margin-top: 10%;
 }
 #blows {
-    height: 100px;
-    overflow: hidden;
-    
+  height: 100px;
+  overflow: hidden;
 }
 .pic {
-    position: relative;
+  position: relative;
 }
 .hp {
-    position: absolute;
-    text-align: center;
-    background-color: rgba(205, 241, 255, 0.513);
-    left: 0; 
-  right: 0; 
+  position: absolute;
+  text-align: center;
+  background-color: rgba(205, 241, 255, 0.513);
+  left: 0;
+  right: 0;
   bottom: 5px;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
   width: 150px;
 }
 footer {
-    position: absolute;
-    bottom: 0px;
-    left: 0%;
-    width: 100%;
-    border-radius: 0rem;
-    color: rgb(230, 230, 230);
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  border-radius: 0rem;
+  color: rgb(230, 230, 230);
+}
+#rotate {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    display: none;
+}
+@media all and (orientation: portrait) {
+  #rotate {
+    display: block;
+  }
 }
