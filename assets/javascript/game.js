@@ -45,6 +45,7 @@ var damageGiven;
 var damageTaken;
 var wins = 0;
 var losses;
+var atkDelay = true;
 
 //game object
 var game = {
@@ -67,6 +68,7 @@ var game = {
       $("#p1Area").append(x);
       p1 = true;
       $("#mainTitle").text("Choose your opponent...");
+      
       currentPlayer = toons[pId];
       console.log(currentPlayer);
     } else if (p1 === true && p2 === false) {
@@ -75,7 +77,8 @@ var game = {
       p2 = true;
       $("#mainTitle").text(null);
       $("#fightTitle").text(" Now, fight to the DEATH...");
-      $("#attackButton").show(); //dont forget to add time in show 2000
+      $(".topRow").hide(1000);
+      $("#attackButton").show(2000); //dont forget to add time in show 2000
       $("#attackButton").text("Attack!!");
       currentDefender = toons[pId];
      console.log(currentDefender);
@@ -87,13 +90,13 @@ var game = {
     damageTaken = currentDefender.atk-currentPlayer.def;
     currentPlayer.hp = currentPlayer.hp-damageTaken;
     $("#hp"+currentPlayer.id).text(currentPlayer.hp);
-    $("#blows").text(currentDefender.name+" hits back "+currentPlayer.name+" for "+damageTaken+" damage!")
+    $("#blows").prepend(currentDefender.name+" hits back "+currentPlayer.name+" for "+damageTaken+" damage!"+"<br>");
   },
   attackDefender: function() {
     damageGiven = currentPlayer.atk - currentDefender.def;
     currentDefender.hp = currentDefender.hp-damageGiven;
     $("#hp"+currentDefender.id).text(currentDefender.hp);
-    $("#blows").text(currentPlayer.name+" hits "+currentDefender.name+" for "+damageGiven+" damage!");
+    $("#blows").prepend(currentPlayer.name+" hits "+currentDefender.name+" for "+damageGiven+" damage!"+"<br>");
     currentPlayer.atk = Math.round(currentPlayer.atk + (currentPlayer.str / 100));
     console.log(currentPlayer.atk);
     
@@ -106,10 +109,13 @@ var game = {
 
 $().ready(function() {
   $("#attackButton").hide();
+  $("footer").hide();
   //start button
   $('#start').on('click', function() {
     game.loadPlayer();
     $(this).hide();
+    $("footer").show(500);
+
   })
   //choosing fighter and defender
   $('#choose0').on('click', function() {
@@ -131,25 +137,23 @@ $().ready(function() {
     } else {
       alert("Try Again");
     }
-    if (currentDefender.hp > 0) {
+    if (currentDefender.hp > 0 && atkDelay === true) {
       setTimeout(function() {
         game.attackPlayer();
-      },2000);
+      },1.5 * 1000);
     } else {
-      $("#blows").text(currentPlayer.name+" WINS!!!")
+      $("#blows").prepend(currentPlayer.name+" WINS!!!")
       p2 = false;
       wins++;
       $("#defenderArea").text("");
       $("#attackButton").hide();
       $("#fightTitle").text("Choose your next victim!!");
+      $(".topRow").show(1000);
     }
     if (wins === 3) {
     
       $("#fightTitle").text(currentPlayer.name+" is the king of the toons!!!");
 
-      
-
-      
     }
     
   });

@@ -1,5 +1,7 @@
 /* div {
     border: solid 1px black;
+    margin-right: 0px;
+    margin-left: 0px;
     
 } */
 html {
@@ -12,7 +14,12 @@ body {
     padding-bottom: 120px;
 }
 #attackButton {
-    margin-top: 100%;
+    margin-top: 10%;
+    
+}
+#blows {
+    height: 100px;
+    overflow: hidden;
     
 }
 .pic {
