@@ -46,6 +46,9 @@ var damageTaken;
 var wins = 0;
 var losses;
 var atkDelay = true;
+var leftHook = new Audio('assets/sounds/leftHook.wav');
+var rightCross = new Audio('assets/sounds/rightCross.wav');
+
 
 //game object
 var game = {
@@ -78,7 +81,7 @@ var game = {
       $("#mainTitle").text(null);
       $("#fightTitle").text(" Now, fight to the DEATH...");
       $(".topRow").hide(1000);
-      $("#attackButton").show(2000); //dont forget to add time in show 2000
+      $("#attackButton").show(); //dont forget to add time in show 2000
       $("#attackButton").text("Attack!!");
       currentDefender = toons[pId];
      console.log(currentDefender);
@@ -91,6 +94,17 @@ var game = {
     currentPlayer.hp = currentPlayer.hp-damageTaken;
     $("#hp"+currentPlayer.id).text(currentPlayer.hp);
     $("#blows").prepend(currentDefender.name+" hits back "+currentPlayer.name+" for "+damageTaken+" damage!"+"<br>");
+    rightCross.play();
+    $("#p1Area").css("box-shadow", "0 0 110px #FF0000")
+      setTimeout(function () {
+    $("#p1Area").css("box-shadow", "0 0 0px #FF0000")
+  },50);
+      setTimeout(function () {
+    $("#p1Area").css("box-shadow", "0 0 110px #FF0000")
+  },100);
+      setTimeout(function () {
+    $("#p1Area").css("box-shadow", "0 0 0px #FF0000")
+  },250);
   },
   attackDefender: function() {
     damageGiven = currentPlayer.atk - currentDefender.def;
@@ -99,7 +113,17 @@ var game = {
     $("#blows").prepend(currentPlayer.name+" hits "+currentDefender.name+" for "+damageGiven+" damage!"+"<br>");
     currentPlayer.atk = Math.round(currentPlayer.atk + (currentPlayer.str / 100));
     console.log(currentPlayer.atk);
-    
+    leftHook.play();
+    $("#defenderArea").css("box-shadow", "0 0 110px #FF0000")
+      setTimeout(function () {
+    $("#defenderArea").css("box-shadow", "0 0 0px #FF0000")
+  },50);
+      setTimeout(function () {
+    $("#defenderArea").css("box-shadow", "0 0 110px #FF0000")
+  },100);
+      setTimeout(function () {
+    $("#defenderArea").css("box-shadow", "0 0 0px #FF0000")
+  },250);
   },
   loadNext: function() {
     alert("whos next?!");
